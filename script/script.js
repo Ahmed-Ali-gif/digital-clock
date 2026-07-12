@@ -59,3 +59,37 @@ const removeSelectValue = () => {
 slct.addEventListener("dbclick", () => {
   removeSelectValue();
 });
+
+//  stopwatch logic
+const stopBtn = document.querySelector(".stop-btn");
+const stopwatchContent = document.querySelector(".stopwatch-content");
+const stopWatch = document.querySelector(".stop-watch");
+let btnOne = document.createElement("button");
+btnOne.textContent = "Stop";
+let btnTwo = document.createElement("button");
+btnTwo.textContent = "Restart";
+
+let stopTimer;
+const startStopWatch = () => {
+  let count = 0;
+  stopTimer = setInterval(() => {
+    stopwatchContent.innerText = count;
+    count++;
+  }, 10);
+  console.log(count);
+
+  btnOne.classList.add("stop-btn");
+  btnTwo.classList.add("stop-btn");
+
+  stopWatch.append(btnOne);
+  stopWatch.append(btnTwo);
+};
+stopBtn.addEventListener("click", () => {
+  startStopWatch();
+});
+btnOne.addEventListener("click", () => {
+  clearInterval(stopTimer);
+});
+btnTwo.addEventListener("click", () => {
+  stopwatchContent.innerText = 0;
+});
