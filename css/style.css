@@ -9,7 +9,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: #0b1b3d;
-  color: #E3F2FD;
+  color: #e3f2fd;
 }
 /* Main work */
 .main-container {
@@ -18,10 +18,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.timeConatiner{
+.timeConatiner {
   font-size: 4rem;
 }
-.box{
+.box {
   border: 2px solid white;
   padding: 2rem 3rem;
   border-radius: 8px;
@@ -30,16 +30,52 @@ body {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-.list-box{
+.list-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   margin-bottom: 10px;
   list-style-type: none;
-  li{
+  li {
     font-size: 2rem;
     font-weight: 600;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+.btn {
+  padding: 0.6rem 1.4rem;
+  font-size: samll;
+  margin-top: 1.4rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  text-transform: capitalize;
+  background-color: #24a0ed;
+  color: #fcfcfc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+/* for js logic (light mode) */
+.light-mode {
+  background-color: #f8fafc;
+  color: #0f172a;
+  .box {
+    border: 2px solid black;
   }
 }
