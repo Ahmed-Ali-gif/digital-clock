@@ -21,6 +21,15 @@ body {
 .timeConatiner{
   font-size: 4rem;
 }
+.box{
+  border: 2px solid white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 .list-box{
   display: flex;
   flex-direction: column;
@@ -28,4 +37,9 @@ body {
   gap: 4px;
   margin-bottom: 10px;
   list-style-type: none;
+  li{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+  }
 }
