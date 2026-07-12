@@ -79,3 +79,21 @@ body {
     border: 2px solid black;
   }
 }
+.timeZone-box {
+  padding-top: 1.4rem;
+  span {
+    font-size: large;
+  }
+}
+#select {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  outline: none;
+  background-color: #193f91;
+  color: #ffffff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
