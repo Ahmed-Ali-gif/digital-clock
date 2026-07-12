@@ -15,7 +15,11 @@
             <li></li>
           </ul>
           <div>
-            <div class="timeConatiner"></div>
+            <div>
+              <span class="timeConatiner"></span
+              ><span class="timeConatiner"></span
+              ><span class="timeConatiner"></span> PM
+            </div>
             <button class="btn">light-Mode</button>
             <select name="timezone" id="select">
               <option value="" selected disabled>Chose</option>
@@ -27,8 +31,8 @@
               <option value="-240">U.A.E.</option>
               <option value="-480">Philipines</option>
               <option value="-345">Nepal</option>
-              <option value="-360">Bhutan</option>
-              <option value="-390">Myanmar</option>
+              <option value="-30">Bhutan</option>
+              <option vue="-390">Myanmar</option>
               <option value="-60">UK</option>
               <option value="240">Canada</option>
               <option value="-600">Austrailia</option>
@@ -46,8 +50,13 @@
               <span>Time zone is: <span class="time-zone-value"></span> </span>
             </div>
             <div class="stop-watch">
-              <div class="stopwatch-content">0</div>
+              <div class="stop-watch--container">
+                <div class="stopwatch-content">0</div>
+              </div>
               <button class="stop-btn">stop-watch</button>
+            </div>
+            <div class="countdown-timer">
+              <span>CountDown: <span class="countDown-content">s</span></span>
             </div>
           </div>
         </div>
