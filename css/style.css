@@ -10,6 +10,7 @@ body {
   font-family: sans-serif;
   background-color: #0b1b3d;
   color: #e3f2fd;
+  outline: #617197;
 }
 /* Main work */
 .main-container {
@@ -160,4 +161,49 @@ button:hover {
   font-size: large;
   font-weight: 600;
   padding: 0px 2rem;
+}
+/* alarm */
+.alarm-btn--box{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: .5rem;
+}
+.alarmCnacel-btn, .alarmConfirm-btn{
+  padding: .4rem 1rem;
+  font-weight: 500;
+  background-color: #415b97;
+  color: #ffffff;
+  font-size: small;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+#alarm-minutes--slct, #alarm-am-pm--slct{
+  padding: .1rem 2rem;
+  background-color: #193f91;
+  color: #ffffff;
+  border: none;
+  margin: .6rem 0px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.alarm-content{
+  font-size: large;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+/* js logic for alarm */
+.alarm{
+  text-transform: lowercase;
+}
+.audioSound{
+  display: none;
 }

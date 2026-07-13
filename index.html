@@ -18,7 +18,7 @@
             <div>
               <span class="timeConatiner"></span
               ><span class="timeConatiner"></span
-              ><span class="timeConatiner"></span> PM
+              ><span class="timeConatiner"></span> AM
             </div>
             <button class="btn">light-Mode</button>
             <select name="timezone" id="select">
@@ -32,7 +32,7 @@
               <option value="-480">Philipines</option>
               <option value="-345">Nepal</option>
               <option value="-30">Bhutan</option>
-              <option vue="-390">Myanmar</option>
+              <option value="-390">Myanmar</option>
               <option value="-60">UK</option>
               <option value="240">Canada</option>
               <option value="-600">Austrailia</option>
@@ -56,7 +56,31 @@
               <button class="stop-btn">stop-watch</button>
             </div>
             <div class="countdown-timer">
-              <span>CountDown: <span class="countDown-content">s</span></span>
+              <span>CountDown: <span class="countDown-content"></span></span>
+            </div>
+            <div class="alarm-box">
+              <audio controls class="audioSound">
+                <source class="audio-source" src="/assets/Nebulite - A New Day (freetouse.com).mp3" type="audio/mpeg" />
+              </audio>
+              <select name="" id="alarm-minutes--slct">
+                <option selected disabled value="">00</option>
+                <option value="2">2</option>
+                <option value="20">20</option>
+                <option value="0">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+              </select>
+              <select name="" id="alarm-am-pm--slct">
+                <option value="" selected disabled>AM / PM</option>
+                <option value="Am">AM</option>
+                <option value="PM">PM</option>
+              </select>
+              <div class="alarm-btn--box">
+                <button class="alarmCnacel-btn">Cancel</button>
+                <button class="alarmConfirm-btn">Confirm</button>
+                <span class="alarm-content"></span>
+              </div>
             </div>
           </div>
         </div>

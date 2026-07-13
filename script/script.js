@@ -29,6 +29,7 @@ switch (time.getDay()) {
     break;
   case 1:
     list[0].innerText = "Monday";
+    break;
   case 2:
     list[0].innerText = "Tuesday";
     break;
@@ -115,3 +116,59 @@ btnTwo.addEventListener("click", () => {
 // Count down timer
 const countdownTimer = document.querySelector(".countdown-timer");
 const countDownContent = document.querySelector(".countDown-content");
+let countDownSec = 59;
+let CcountDownMin = 59;
+let CountDownHours = 59;
+setInterval(() => {
+  if (countDownSec < 1) {
+    CcountDownMin--;
+    countDownSec = 59;
+  }
+  if (CcountDownMin < 1) {
+    CountDownHours--;
+    CcountDownMin = 59;
+  }
+  countDownSec--;
+  countDownContent.innerText = `${CountDownHours}:${CcountDownMin}:${countDownSec}`;
+}, 1000);
+
+// alarm-logic
+const alarmMinutesSlct = document.querySelector("#alarm-minutes--slct");
+const alarmAm_PmSlct = document.querySelector("#alarm-am-pm--slct");
+const alarmCnacelBtn = document.querySelector(".alarmCnacel-btn");
+const alarmConfirmBtn = document.querySelector(".alarmConfirm-btn");
+const alarmContent = document.querySelector(".alarm-content");
+const alarmSound = document.querySelector(".audioSound");
+
+let stopAlram;
+alarmConfirmBtn.addEventListener("click", () => {
+  alarmAm_PmSlct.classList.add("alarm");
+  alarmContent.innerText = `${alarmMinutesSlct.value} ${alarmAm_PmSlct.value}`;
+  let alarmCountSec = 1;
+  let alarmCountMinutes = 1;
+  let chngeNum;
+  stopAlram = setInterval(() => {
+    if (alarmCountSec > 3) {
+      alarmCountSec = 1;
+      alarmCountMinutes++;
+    }
+    if (alarmCountMinutes > 60) {
+      alarmCountMinutes = 1;
+    }
+    chngeNum = Number(alarmMinutesSlct.value);
+    if (chngeNum == alarmCountMinutes) {
+      alarmSound.play();
+      chngeNum = 0;
+      alarmCountMinutes = 0;
+      clearInterval(stopAlram);
+    }
+    alarmCountSec++;
+  }, 1000);
+});
+alarmCnacelBtn.addEventListener("click", () => {
+  alarmContent.innerText = "";
+  clearInterval(stopAlram);
+  alarmSound.pause();
+   alarmCountSec = 0;
+   alarmCountMinutes = 0;
+});
