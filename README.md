@@ -91,7 +91,7 @@ Through this project, I learned how to:
 
 ## 📸 Preview
 
-_Add screenshots or a GIF here after deployment._
+<img width="314" height="380" alt="Screenshot 2026-07-13 200821" src="https://github.com/user-attachments/assets/0a887828-080c-48cd-ab69-a1acc32e1af2" />
 
 ---
 
@@ -118,7 +118,7 @@ This project was built as part of my JavaScript learning journey. Instead of cop
 Add your deployed project link here.
 
 ```
-https://your-live-demo-link.com
+https://digital-clock-psi-one.vercel.app/
 ```
 
 ---
